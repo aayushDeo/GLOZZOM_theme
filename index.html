@@ -205,7 +205,7 @@
               <a
                 href=""
                 class="video"
-                data-video="https://www.youtube.com/embed/HnwsG9a5riA"
+                data-video="https://www.youtube.com/embed/K4DyBUG242c"
                 data-toggle="modal"
                 data-target="#videoModal"
                 ><i class="fas fa-play fa-3x"></i
@@ -382,7 +382,7 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
-    ></script> 
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
       integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g=="
@@ -405,18 +405,18 @@
         $(this).ekkoLightbox();
       });
 
-      //Video Play
+      // Video Play
       $(function () {
+        // Auto play modal video
         $('.video').click(function () {
           var theModal = $(this).data('target'),
             videoSRC = $(this).attr('data-video'),
             videoSRCauto =
               videoSRC +
               '?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1';
-
-          $(theModal + 'iframe').attr('src', videoSRCauto);
-          $(theModal + 'button.close').click(function () {
-            $(theModal + 'iframe').attr('src', videoSRC);
+          $(theModal + ' iframe').attr('src', videoSRCauto);
+          $(theModal + ' button.close').click(function () {
+            $(theModal + ' iframe').attr('src', videoSRC);
           });
         });
       });
